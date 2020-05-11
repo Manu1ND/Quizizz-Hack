@@ -5,9 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - Quizizz Hack</title>
-    <meta name="description" content="QUizizz Hack by Manu">
-    <link rel="icon" type="image/jpeg" sizes="undefinedxundefined" href="assets/img/bg-showcase-1.jpg">
-    <link rel="icon" type="image/jpeg" sizes="undefinedxundefined" href="assets/img/bg-masthead.jpg">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -66,7 +63,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script>
         document.getElementById("button").onclick = function() {
-            var url = document.getElementById('urlid').value;
+            var url = "https://cors-anywhere.herokuapp.com/" + document.getElementById('urlid').value;
             document.getElementById("start").style.display = 'none';
             //https://cors-anywhere.herokuapp.com/https://quizizz.com/quiz/5eb80cfa74857d0020455c73
             fetch(url)
