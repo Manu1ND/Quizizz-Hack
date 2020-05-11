@@ -26,7 +26,7 @@
                 <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
                     <div class="form-row">
                         <div class="col-12 col-md-9 mb-2 mb-md-0">
-                            <input class="form-control form-control-lg" type="text" id="urlid" placeholder="Enter URL here...">
+                            <input class="form-control form-control-lg" type="url" id="urlid" placeholder="Enter URL here...">
                         </div>
                         <div class="col-12 col-md-3">
                             <button class="btn btn-primary btn-block btn-lg" type="submit" href="quesans" id="button">Submit!!!</button>
@@ -63,16 +63,18 @@
     <script>
         document.getElementById("button").onclick = function() {
             //https://cors-anywhere.herokuapp.com/
-            var url = "https://cors-anywhere.herokuapp.com/" + document.getElementById('urlid').value;
+            var url = "http://allow-any-origin.appspot.com/" + document.getElementById('urlid').value;
             //removes join/
             url = url.replace("join/", "");
             var n = url.indexOf('/start');
             url = url.substring(0, n != -1 ? n : url.length);
+            document.getElementById("questions").innerHTML = "";
+            document.getElementById("quesans").style.display = 'none';
             document.getElementById("quesans").style.display = 'block';
             document.getElementById("quesans").scrollIntoView({
                 behavior: "smooth"
             });
-            //document.getElementById("start").style.display = 'none';
+
             fetch(url)
                 .then(response => response.json())
                 .then(json => {
@@ -118,5 +120,7 @@
     <script>
     </script>
 </body>
+
+</html>
 
 </html>
