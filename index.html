@@ -5,54 +5,133 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - Quizizz Hack</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
 
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+    <style>
+      .table-dark.table-hover tbody tr:hover{
+        color: #239d60;
+      }
+    </style>
 <body>
-    <nav class="navbar navbar-light navbar-expand bg-light navigation-clean">
-        <div class="container"><a class="navbar-brand" href="#">QUizizz Hack</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"></button>
-            <div class="collapse navbar-collapse" id="navcol-1"><a class="btn btn-primary ml-auto" role="button" href="https://github.com/Manu1ND">Manu1ND</a></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#" style=" color: #239d60; font-family:'Pacifico', cursive ;">Quizizz Hack</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <!-- <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li> -->
+          </ul>
+          <div class="my-2 my-lg-0">
+            
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">More Features Coming Soon</button>
+          </div>
         </div>
-    </nav>
-    <header class="masthead text-white text-center" style="background:url('assets/img/bg-masthead.jpg')no-repeat center center;background-size:cover;" id="start">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-9 mx-auto">
-                    <h1 class="mb-5">Enter URL...</h1>
-                </div>
-                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+      </nav>
+
+    <section class="coverpage conatiner" style="height: 90vh; width: 100%; background-color:#a3de83;" id="start">
+      
+            <div class="row h-100 " style="padding: 5px;">                
+                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto " style="margin-top: 20vh ;">
+                    <div class="col-12 mb-5 text-center">
+                        <h1 style="font-size: 10vh; color: #239d60; font-family:'Pacifico', cursive ;">Quizizz Hack</h1>
+                    </div>
                     <div class="form-row">
-                        <div class="col-12 col-md-9 mb-2 mb-md-0">
+                        <div class="col-md-9 mb-2 ">
                             <input class="form-control form-control-lg" type="url" id="urlid" placeholder="Enter URL here...">
                         </div>
-                        <div class="col-12 col-md-3">
-                            <button class="btn btn-primary btn-block btn-lg" type="submit" href="quesans" id="button">Submit!!!</button>
+                        <div class="col-md-3">
+                            <button class="btn btn-success btn-block btn-lg" type="submit" href="quesans" id="button">Submit</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <section class="features-icons bg-light text-center" id="quesans" style="display: none;">
-        <div class="container">
-            <div class="row" id="questions">
-            </div>
-        </div>
+        
     </section>
-    <footer class="footer bg-light">
-        <div class="container">
+
+   
+
+    <section class="answers" id="tableans" style="display: none; min-height: 100vh; background-color: #f7f39a; ">
+
+      <div class="container h-100 mx-auto">
+        <h1 class="text-center mb-5" style=" font-size: 10vh; color: #239d60; font-family:'Pacifico', cursive ; padding-top: 10vh;">
+          Answers
+        </h1>
+     
+        
+      <div class="table-responsive pb-5">
+        <table class="table table-bordered table-dark table-hover" style=" background-color: #a3de83; color: black;">
+            <thead class="" style="background-color: #239d60; color:white">
+              <tr>
+            
+                <th scope="col">Questions</th>
+                <th scope="col">Answers</th>
+               
+              </tr>
+            </thead>
+            <tbody id="tableanswers">
+              <!-- <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+              </tr>
+              <tr>
+                <td>Jacob</td>
+                <td>Thornton</td>
+              </tr>
+              <tr>
+                <td>Larry</td>
+                <td>the Bird</td>
+              </tr>  -->
+            </tbody>
+          </table>
+          
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="footer text-white sticky-bottom" style="background-color: #239d60;">
+        <div class="container-fluid p-2">
             <div class="row">
-                <div class="col-lg-6 my-auto h-100 text-center text-lg-left">
-                    <p class="text-muted small mb-4 mb-lg-0">Quizizz Hack.</p>
+                <div class="col-lg-6 text-center text-lg-left ">
+                    <p class="h-100 my-auto " style="font-size:24px; color:#a3de83 ; font-family:'Pacifico', cursive ;" >Quizizz Hack.</p>
                 </div>
-                <div class="col-lg-6 my-auto h-100 text-center text-lg-right">
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item"><a href="https://github.com/Manu1ND"><i class="fa fa-github fa-2x fa-fw"></i></a></li>
-                        <li class="list-inline-item"><a href="https://twitter.com/Iam_Manu21"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
-                        <li class="list-inline-item"><a href="https://www.instagram.com/naik_manu21/"><i class="fa fa-instagram fa-2x fa-fw"></i></a></li>
+                <div class="col-lg-6 text-center text-lg-right h-100 my-auto">
+                    <ul class="mb-0 list-inline">
+                        <li class="list-inline-item"><a href="https://github.com/Manu1ND"><i class="fa fa-github fa-2x fa-fw" style="color: #a3de83;"></i></a></li>
+                        <li class="list-inline-item"><a href="https://twitter.com/Iam_Manu21"><i class="fa fa-twitter fa-2x fa-fw" style="color: #a3de83;"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/naik_manu21/"><i class="fa fa-instagram fa-2x fa-fw" style="color: #a3de83;"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -68,57 +147,55 @@
             url = url.replace("join/", "");
             var n = url.indexOf('/start');
             url = url.substring(0, n != -1 ? n : url.length);
-            document.getElementById("questions").innerHTML = "";
-            document.getElementById("quesans").style.display = 'none';
-            document.getElementById("quesans").style.display = 'block';
-            document.getElementById("quesans").scrollIntoView({
-                behavior: "smooth"
-            });
+            document.getElementById("tableanswers").innerHTML = "";
+            document.getElementById("tableans").style.display = 'none';
+            document.getElementById("tableans").style.display = 'block';
+           
 
             fetch(url)
                 .then(response => response.json())
                 .then(json => {
                     var data = json.data.quiz.info.questions;
                     console.log(data);
-                    for (var i = 0; i < data.length; i++) {
-                        const div = document.createElement('div');
-                        div.className = 'col-lg-12';
-                        const innerdiv = document.createElement('div');
-                        innerdiv.className = 'mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3';
-
+                    for (var i = 0; i < data.length; i++) {                       
+                        const tr = document.createElement('tr');
                         console.log(i);
                         var question = data[i].structure.query.text.slice(3, -4);
                         console.log(question);
-                        innerdiv.innerHTML = `
-                    <h3 >` + question + `</h3>`;
+                        tr.innerHTML = `<td >` + question + `</td>`;
                         var options = data[i].structure.options;
                         if (data[i].type == "MCQ") {
                             var ans = data[i].structure.answer;
                             var answer = options[ans].text.slice(3, -4);
                             console.log(answer);
-                            innerdiv.innerHTML += `<p class = "lead mb-0" >` + answer + `</p>`;
+                            tr.innerHTML += `<td >` + answer + `</td>`;
                         } else if (data[i].type == "MSQ") {
                             var ans = data[i].structure.answer;
                             for (var j = 0; j < ans.length; j++) {
                                 var answer = options[ans[j]].text.slice(3, -4);
                                 console.log(answer);
-                                innerdiv.innerHTML += `<p class = "lead mb-0" >` + answer + `</p>`;
+                                tr.innerHTML += `<td >` + answer + `</td>`;
                             }
                         } else if (data[i].type == "BLANK") {
                             for (var j = 0; j < options.length; j++) {
                                 var answer = options[j].text;
                                 console.log(answer);
-                                innerdiv.innerHTML += `<p class = "lead mb-0" >` + answer + `</p>`;
+                                tr.innerHTML += `<td >` + answer + `</td>`;
                             }
                         }
-                        div.append(innerdiv);
-                        document.getElementById('questions').appendChild(div);
+                       
+                        document.getElementById('tableanswers').appendChild(tr);
+                        document.getElementById("tableans").scrollIntoView({
+                          behavior: "smooth"
+                      });
                     }
                 });
         }
     </script>
-    <script>
-    </script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="assets/js/auth.js"></script>
+
+
 </body>
 
 </html>
