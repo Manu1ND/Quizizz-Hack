@@ -19,20 +19,21 @@
     <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
     <style>
-      .table-dark.table-hover tbody tr:hover{
-        color: #239d60;
-      }
+        .table-dark.table-hover tbody tr:hover {
+            color: #239d60;
+        }
     </style>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#" style=" color: #239d60; font-family:'Pacifico', cursive ;">Quizizz Hack</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#" style=" color: #239d60; font-family:'Pacifico', cursive ;">Quizizz Hack</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <!-- <li class="nav-item active">
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <!-- <li class="nav-item active">
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
@@ -52,17 +53,17 @@
             <li class="nav-item">
               <a class="nav-link disabled" href="#">Disabled</a>
             </li> -->
-          </ul>
-          <div class="my-2 my-lg-0">
-            
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">More Features Coming Soon</button>
-          </div>
-        </div>
-      </nav>
+                </ul>
+                <div class="my-2 my-lg-0">
 
-    <section class="coverpage conatiner" style="height: 90vh; width: 100%; background-color:#a3de83;" id="start">
-      
-            <div class="row h-100 " style="padding: 5px;">                
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">More Features Coming Soon</button>
+                </div>
+            </div>
+        </nav>
+
+        <section class="coverpage conatiner" style="height: 90vh; width: 100%; background-color:#a3de83;" id="start">
+
+            <div class="row h-100 " style="padding: 5px;">
                 <div class="col-md-10 col-lg-8 col-xl-7 mx-auto " style="margin-top: 20vh ;">
                     <div class="col-12 mb-5 text-center">
                         <h1 style="font-size: 10vh; color: #239d60; font-family:'Pacifico', cursive ;">Quizizz Hack</h1>
@@ -77,31 +78,31 @@
                     </div>
                 </div>
             </div>
-        
-    </section>
 
-   
+        </section>
 
-    <section class="answers" id="tableans" style="display: none; min-height: 100vh; background-color: #f7f39a; ">
 
-      <div class="container h-100 mx-auto">
-        <h1 class="text-center mb-5" style=" font-size: 10vh; color: #239d60; font-family:'Pacifico', cursive ; padding-top: 10vh;">
-          Answers
-        </h1>
-     
-        
-      <div class="table-responsive pb-5">
-        <table class="table table-bordered table-dark table-hover" style=" background-color: #a3de83; color: black;">
-            <thead class="" style="background-color: #239d60; color:white">
-              <tr>
-            
-                <th scope="col">Questions</th>
-                <th scope="col">Answers</th>
-               
-              </tr>
-            </thead>
-            <tbody id="tableanswers">
-              <!-- <tr>
+
+        <section class="answers" id="tableans" style="display: none; min-height: 100vh; background-color: #f7f39a; ">
+
+            <div class="container h-100 mx-auto">
+                <h1 class="text-center mb-5" style=" font-size: 10vh; color: #239d60; font-family:'Pacifico', cursive ; padding-top: 10vh;">
+                    Answers
+                </h1>
+
+
+                <div class="table-responsive pb-5">
+                    <table class="table table-bordered table-dark table-hover" style=" background-color: #a3de83; color: black;">
+                        <thead class="" style="background-color: #239d60; color:white">
+                            <tr>
+
+                                <th scope="col">Questions</th>
+                                <th scope="col">Answers</th>
+
+                            </tr>
+                        </thead>
+                        <tbody id="tableanswers">
+                            <!-- <tr>
                 <td>Mark</td>
                 <td>Otto</td>
               </tr>
@@ -113,90 +114,95 @@
                 <td>Larry</td>
                 <td>the Bird</td>
               </tr>  -->
-            </tbody>
-          </table>
-          
-        </div>
-      </div>
-    </section>
+                        </tbody>
+                    </table>
 
-
-    <footer class="footer text-white sticky-bottom" style="background-color: #239d60;">
-        <div class="container-fluid p-2">
-            <div class="row">
-                <div class="col-lg-6 text-center text-lg-left ">
-                    <p class="h-100 my-auto " style="font-size:24px; color:#a3de83 ; font-family:'Pacifico', cursive ;" >Quizizz Hack.</p>
-                </div>
-                <div class="col-lg-6 text-center text-lg-right h-100 my-auto">
-                    <ul class="mb-0 list-inline">
-                        <li class="list-inline-item"><a href="https://github.com/Manu1ND"><i class="fa fa-github fa-2x fa-fw" style="color: #a3de83;"></i></a></li>
-                        <li class="list-inline-item"><a href="https://twitter.com/Iam_Manu21"><i class="fa fa-twitter fa-2x fa-fw" style="color: #a3de83;"></i></a></li>
-                        <li class="list-inline-item"><a href="https://www.instagram.com/naik_manu21/"><i class="fa fa-instagram fa-2x fa-fw" style="color: #a3de83;"></i></a></li>
-                    </ul>
                 </div>
             </div>
-        </div>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.getElementById("button").onclick = function() {
-            //https://cors-anywhere.herokuapp.com/
-            var url = "https://allow-any-origin.appspot.com/" + document.getElementById('urlid').value;
-            //removes join/
-            url = url.replace("join/", "");
-            var n = url.indexOf('/start');
-            url = url.substring(0, n != -1 ? n : url.length);
-            document.getElementById("tableanswers").innerHTML = "";
-            document.getElementById("tableans").style.display = 'none';
-            document.getElementById("tableans").style.display = 'block';
-           
+        </section>
 
-            fetch(url)
-                .then(response => response.json())
-                .then(json => {
-                    var data = json.data.quiz.info.questions;
-                    console.log(data);
-                    for (var i = 0; i < data.length; i++) {                       
-                        const tr = document.createElement('tr');
-                        console.log(i);
-                        var question = data[i].structure.query.text.slice(3, -4);
-                        console.log(question);
-                        tr.innerHTML = `<td >` + question + `</td>`;
-                        var options = data[i].structure.options;
-                        if (data[i].type == "MCQ") {
-                            var ans = data[i].structure.answer;
-                            var answer = options[ans].text.slice(3, -4);
-                            console.log(answer);
-                            tr.innerHTML += `<td >` + answer + `</td>`;
-                        } else if (data[i].type == "MSQ") {
-                            var ans = data[i].structure.answer;
-                            for (var j = 0; j < ans.length; j++) {
-                                var answer = options[ans[j]].text.slice(3, -4);
+
+        <footer class="footer text-white sticky-bottom" style="background-color: #239d60;">
+            <div class="container-fluid p-2">
+                <div class="row">
+                    <div class="col-lg-6 text-center text-lg-left ">
+                        <p class="h-100 my-auto " style="font-size:24px; color:#a3de83 ; font-family:'Pacifico', cursive ;">Quizizz Hack.</p>
+                    </div>
+                    <div class="col-lg-6 text-center text-lg-right h-100 my-auto">
+                        <ul class="mb-0 list-inline">
+                            <li class="list-inline-item"><a href="https://github.com/Manu1ND"><i class="fa fa-github fa-2x fa-fw" style="color: #a3de83;"></i></a></li>
+                            <li class="list-inline-item"><a href="https://twitter.com/Iam_Manu21"><i class="fa fa-twitter fa-2x fa-fw" style="color: #a3de83;"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.instagram.com/naik_manu21/"><i class="fa fa-instagram fa-2x fa-fw" style="color: #a3de83;"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.getElementById("button").onclick = function() {
+                //https://cors-anywhere.herokuapp.com/
+                var url = "https://allow-any-origin.appspot.com/" + document.getElementById('urlid').value;
+                //removes join/
+                url = url.replace("join/", "");
+                var n = url.indexOf('/start');
+                url = url.substring(0, n != -1 ? n : url.length);
+                document.getElementById("tableanswers").innerHTML = "";
+                document.getElementById("tableans").style.display = 'none';
+                document.getElementById("tableans").style.display = 'block';
+
+
+                fetch(url)
+                    .then(response => response.json())
+                    .then(json => {
+                        var data = json.data.quiz.info.questions;
+                        console.log(data);
+                        console.log(data.length);
+                        for (var i = 0; i < data.length; i++) {
+                            const tr = document.createElement('tr');
+                            console.log(i);
+                            var question = data[i].structure.query.text.slice(3, -4);
+                            console.log(question);
+                            tr.innerHTML = `<td >` + question + `</td>`;
+                            var options = data[i].structure.options;
+                            if (data[i].type == "MCQ") {
+                                var ans = data[i].structure.answer;
+                                if (ans == -1) {
+                                    var answer = "Optional";
+                                } else {
+                                    var answer = options[ans].text.slice(3, -4);
+                                }
                                 console.log(answer);
                                 tr.innerHTML += `<td >` + answer + `</td>`;
+                            } else if (data[i].type == "MSQ") {
+                                var ans = data[i].structure.answer;
+                                for (var j = 0; j < ans.length; j++) {
+                                    var answer = options[ans[j]].text.slice(3, -4);
+                                    console.log(answer);
+                                    tr.innerHTML += `<td >` + answer + `</td>`;
+                                }
+                            } else if (data[i].type == "BLANK") {
+                                for (var j = 0; j < options.length; j++) {
+                                    var answer = options[j].text;
+                                    console.log(answer);
+                                    tr.innerHTML += `<td >` + answer + `</td>`;
+                                }
                             }
-                        } else if (data[i].type == "BLANK") {
-                            for (var j = 0; j < options.length; j++) {
-                                var answer = options[j].text;
-                                console.log(answer);
-                                tr.innerHTML += `<td >` + answer + `</td>`;
-                            }
+
+                            document.getElementById('tableanswers').appendChild(tr);
+                            document.getElementById("tableans").scrollIntoView({
+                                behavior: "smooth"
+                            });
                         }
-                       
-                        document.getElementById('tableanswers').appendChild(tr);
-                        document.getElementById("tableans").scrollIntoView({
-                          behavior: "smooth"
-                      });
-                    }
-                });
-        }
-    </script>
-    <script src="assets/js/firebase.js"></script>
-    <script src="assets/js/auth.js"></script>
+                    });
+            }
+        </script>
+        <script src="assets/js/firebase.js"></script>
+        <script src="assets/js/auth.js"></script>
 
 
-</body>
+    </body>
 
 </html>
 
