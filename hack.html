@@ -230,58 +230,62 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
   <script>
-    document.getElementById("button").onclick = function () {
+    document.getElementById("button").onclick = function() {
       //https://cors-anywhere.herokuapp.com/
-      var url =
-        "https://allow-any-origin.appspot.com/" +
-        document.getElementById("urlid").value;
+      var url = "https://allow-any-origin.appspot.com/" + document.getElementById('urlid').value;
       //removes join/
       url = url.replace("join/", "");
-      var n = url.indexOf("/start");
+      var n = url.indexOf('/start');
       url = url.substring(0, n != -1 ? n : url.length);
       document.getElementById("tableanswers").innerHTML = "";
-      document.getElementById("tableans").style.display = "none";
-      document.getElementById("tableans").style.display = "block";
+      document.getElementById("tableans").style.display = 'none';
+      document.getElementById("tableans").style.display = 'block';
+
 
       fetch(url)
-        .then((response) => response.json())
-        .then((json) => {
-          var data = json.data.quiz.info.questions;
-          console.log(data);
-          for (var i = 0; i < data.length; i++) {
-            const tr = document.createElement("tr");
-            console.log(i);
-            var question = data[i].structure.query.text.slice(3, -4);
-            console.log(question);
-            tr.innerHTML = `<td >` + question + `</td>`;
-            var options = data[i].structure.options;
-            if (data[i].type == "MCQ") {
-              var ans = data[i].structure.answer;
-              var answer = options[ans].text.slice(3, -4);
-              console.log(answer);
-              tr.innerHTML += `<td >` + answer + `</td>`;
-            } else if (data[i].type == "MSQ") {
-              var ans = data[i].structure.answer;
-              for (var j = 0; j < ans.length; j++) {
-                var answer = options[ans[j]].text.slice(3, -4);
-                console.log(answer);
-                tr.innerHTML += `<td >` + answer + `</td>`;
-              }
-            } else if (data[i].type == "BLANK") {
-              for (var j = 0; j < options.length; j++) {
-                var answer = options[j].text;
-                console.log(answer);
-                tr.innerHTML += `<td >` + answer + `</td>`;
-              }
-            }
+          .then(response => response.json())
+          .then(json => {
+              var data = json.data.quiz.info.questions;
+              console.log(data);
+              console.log(data.length);
+              for (var i = 0; i < data.length; i++) {
+                  const tr = document.createElement('tr');
+                  console.log(i);
+                  var question = data[i].structure.query.text.slice(3, -4);
+                  console.log(question);
+                  tr.innerHTML = `<td >` + question + `</td>`;
+                  var options = data[i].structure.options;
+                  if (data[i].type == "MCQ") {
+                      var ans = data[i].structure.answer;
+                      if (ans == -1) {
+                          var answer = "Optional";
+                      } else {
+                          var answer = options[ans].text.slice(3, -4);
+                      }
+                      console.log(answer);
+                      tr.innerHTML += `<td >` + answer + `</td>`;
+                  } else if (data[i].type == "MSQ") {
+                      var ans = data[i].structure.answer;
+                      for (var j = 0; j < ans.length; j++) {
+                          var answer = options[ans[j]].text.slice(3, -4);
+                          console.log(answer);
+                          tr.innerHTML += `<td >` + answer + `</td>`;
+                      }
+                  } else if (data[i].type == "BLANK") {
+                      for (var j = 0; j < options.length; j++) {
+                          var answer = options[j].text;
+                          console.log(answer);
+                          tr.innerHTML += `<td >` + answer + `</td>`;
+                      }
+                  }
 
-            document.getElementById("tableanswers").appendChild(tr);
-            document.getElementById("tableans").scrollIntoView({
-              behavior: "smooth",
+                  document.getElementById('tableanswers').appendChild(tr);
+                  document.getElementById("tableans").scrollIntoView({
+                      behavior: "smooth"
+                  });
+              }
             });
           }
-        });
-    };
   </script>
   <script src="assets/js/firebase.js"></script>
   <script src="assets/js/auth.js"></script>
