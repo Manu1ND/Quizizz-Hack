@@ -155,8 +155,7 @@ if (found) {
                             } else {
                                 ModalContent.insertAdjacentHTML('beforeend', `<b>Answer:</b> ${s.structure.options[c].text || s.structure.options[c].media[0].url} <br>`)
                             }
-                            //console.log(s.structure)
-                            ModalContent.insertAdjacentHTML('beforeend', `<b>Answer:</b> ${s.structure.options[c].text || s.structure.options[c].media[0].url} <br>`)
+
                         }
                     } else {
                         ModalContent.insertAdjacentHTML('beforeend', `<b>Answer:</b>  Optional<br>`)
